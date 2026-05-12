@@ -1,0 +1,7 @@
+# Reflection Subscriber
+# A. What is AMQP?
+AMQP stands for Advanced Message Queuing Protocol.
+In simple terms, it is an open standard protocol that allows different applications, systems, or services to communicate with each other by sending and receiving messages safely and reliably. When we build complex software architectures (like microservices), different parts of the system need to pass data to one another without losing it if one part crashes. AMQP acts as the set of rules for a message broker (like RabbitMQ) to accept messages from a "producer" (the sender), queue them up, and route them to the correct "consumer" (the receiver).
+
+# B. What does it mean? guest:guest@localhost:5672 , what is the first guest, and what is the second guest, and what is localhost:5672 is for?  
+The string guest:guest@localhost:5672 is a standard connection URI (username:password@hostname:port) used by an application to connect to an AMQP message broker, most commonly RabbitMQ. In this format, the first "guest" represents the default administrator username, while the second "guest" is the default password assigned to that account, which RabbitMQ securely restricts to local connections only. The "localhost" portion tells our application to look for the message broker running on the exact same computer we are currently using rather than an external server, and "5672" is the standard default network port dedicated specifically to receiving unencrypted AMQP message traffic.
